@@ -1,0 +1,23 @@
+name: Build Docker Image
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'build_docker_image/**'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: build_docker_image
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build Docker Image
+        run: docker build -t my-docker-app .

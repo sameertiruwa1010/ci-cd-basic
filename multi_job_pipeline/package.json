@@ -1,0 +1,9 @@
+{
+  "name": "multi-job-lab",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build": "echo 'Building application...'",
+    "test": "bash test.sh"
+  }
+}
